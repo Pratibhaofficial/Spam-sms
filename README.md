@@ -2,7 +2,7 @@
 
 ## 🚀 Project Overview
 
-This project focuses on building a Machine Learning model to classify SMS messages as **Spam** or **Ham (Not Spam)**. It uses Natural Language Processing (NLP) techniques and Naive Bayes algorithms to achieve accurate classification.
+This project focuses on building a Machine Learning model to classify SMS messages as **Spam** or **Ham (Not Spam)** using Natural Language Processing (NLP) techniques.
 
 An interactive **Streamlit web app** is also developed to allow users to test messages in real-time.
 
@@ -11,14 +11,14 @@ An interactive **Streamlit web app** is also developed to allow users to test me
 ## 🎯 Objective
 
 * Detect spam messages effectively
-* Minimize false positives (important messages marked as spam)
-* Improve model performance using feature engineering and tuning
+* Reduce misclassification of important messages
+* Improve model performance using preprocessing and tuning
 
 ---
 
 ## 📂 Dataset
 
-* The dataset consists of labeled SMS messages
+* Labeled SMS dataset
 * Labels:
 
   * `0` → Ham (Not Spam)
@@ -31,8 +31,8 @@ An interactive **Streamlit web app** is also developed to allow users to test me
 * Python
 * Pandas, NumPy
 * Scikit-learn
-* NLTK (Natural Language Processing)
-* Streamlit (for web app)
+* NLTK
+* Streamlit
 
 ---
 
@@ -48,13 +48,17 @@ An interactive **Streamlit web app** is also developed to allow users to test me
 ### 🔹 Feature Extraction
 
 * TF-IDF Vectorization
-* Use of n-grams to capture word combinations
+* Use of n-grams (unigrams + bigrams)
 
-### 🔹 Models Used
+---
+
+## 🤖 Models Used
 
 * Gaussian Naive Bayes
 * Multinomial Naive Bayes
 * Bernoulli Naive Bayes
+
+👉 **Multinomial Naive Bayes** performed the best and was selected as the final model.
 
 ---
 
@@ -67,13 +71,13 @@ Metrics used:
 * Recall
 * F1-score
 
-👉 Special focus was given to **Precision and Recall for Spam detection**
+👉 Focus was given to **precision and recall for spam detection**
 
 ---
 
 ## 🔥 Model Improvements
 
-* Removed duplicate data to avoid data leakage
+* Removed duplicate messages to avoid data leakage
 * Tuned **alpha parameter** in MultinomialNB
 * Adjusted classification **threshold (0.3)** to improve recall
 
@@ -81,31 +85,31 @@ Metrics used:
 
 ## ✅ Final Model Performance
 
-* High Accuracy (~98%)
-* Balanced Precision and Recall
-* Improved detection of spam messages
+* Accuracy: ~98%
+* High precision and improved recall for spam
+* Balanced performance using threshold tuning
 
 ---
 
 ## 💻 Streamlit App
 
-### ▶️ Run the app locally:
+### ▶️ Run locally:
 
-```bash
+```bash id="7g4gcv"
 streamlit run app.py
 ```
 
 ### 🌐 Features:
 
-* User input for SMS message
-* Real-time prediction
-* Clean and simple UI
+* Input SMS message
+* Real-time prediction (Spam / Not Spam)
+* Simple UI
 
 ---
 
 ## 📁 Project Structure
 
-```
+```id="y8csq1"
 SMS_Spam/
 │
 ├── app.py
@@ -120,17 +124,17 @@ SMS_Spam/
 
 ## ⚠️ Limitations
 
-* May misclassify unseen promotional messages
-* Performance depends on dataset vocabulary
-* Simple models used (can be improved further)
+* May miss spam messages with unseen vocabulary
+* Depends on dataset quality
+* Uses simple models (scope for improvement)
 
 ---
 
 ## 🔮 Future Improvements
 
-* Use advanced models (Logistic Regression, Random Forest, Deep Learning)
+* Try advanced models (Logistic Regression, Random Forest, Deep Learning)
 * Improve feature engineering
-* Deploy the app online
+* Deploy app online
 
 ---
 
@@ -142,6 +146,6 @@ Pratibha
 
 ## ⭐ Conclusion
 
-This project demonstrates the complete pipeline of a Machine Learning solution — from data preprocessing and model building to deployment using Streamlit.
+This project demonstrates a complete machine learning workflow — from preprocessing and model building to evaluation and deployment using Streamlit.
 
 ---
