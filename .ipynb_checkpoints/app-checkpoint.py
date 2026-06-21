@@ -6,7 +6,7 @@ from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
 
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
-model = pickle.load(open('model_tuned.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 st.title('Spam Detection')
 
